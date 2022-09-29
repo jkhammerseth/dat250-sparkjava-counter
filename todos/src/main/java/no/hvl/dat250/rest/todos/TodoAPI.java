@@ -104,6 +104,8 @@ public class TodoAPI {
             todos.remove(deletedTodo);
             if (deletedTodo != null){
                 todos.remove(deletedTodo);
+            } else {
+                return (String.format("Todo with the id \"%s\" not found!", inputID));
             }
             Gson gson = new Gson();
             return gson.toJson(deletedTodo);
